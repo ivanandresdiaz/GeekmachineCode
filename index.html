@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="quote-box" style="display:flex; justify-content:center; align-items:center; width:100%; height: 90vh; flex-direction: column;">
+    <h3 id="text"> Texto</h3>
+    <p id="author">Author</p>
+    <button type="button" id="new-quote">Clickable</button>
+    <a href="https://twitter.com/intent/tweet?text=Andres%20Diaz%20" target="_blank"id="tweet-quote">Twitter</a>
+    <script>
+    const ButtonGenerator = document.getElementById('new-quote');
+    const authorShow = document.getElementById('author');
+    const quoteShow = document.getElementById('text');
+      const quotes = [{
+    quote: `-  lo que valoras en las demas personas, dice mucho de como te valoras a ti mismo.`,
+    author: ` Andres Diaz`
+}, {
+    quote: `- cuanto mayor silencio guardas, mas puedes oir`,
+    author: `Andres Diaz`
+}, {
+    quote: ` - que no se te pase la vida, deseando otra`,
+    author: `Desconocido`
+}, {
+    quote: ` -  Aquel que tiene un porqué para vivir se puede enfrentar a todos los "cómos"`,
+    author: `Nitchez`
+}, {
+    quote: `- no hay que contar las horas, hay que hacer que las horas cuenten.`,
+    author: `desconocido`
+}, {
+    quote: `- Cuando llegue el sufrimiento, míralo a la cara y enfréntate a él`,
+    author: `Nitchez`
+}, {
+    quote: ` -  La mentira más común es aquella con la que las personas se engañan a sí mismas.`,
+    author:`Nitchez`
+}, {
+    quote: `-  ¿Es el hombre un fallo de Dios, o Dios un fallo del hombre?`,
+    author: `Nitchez`
+}, {
+    quote: `-  El remordimiento es como un perro mordiendo una piedra: una estupidez`,
+    author: `Mack Zuckerberg`
+}, {
+    quote: `- La pregunta no es "¿qué queremos saber de la gente?", sino "¿qué desea contarnos la gente de sí misma?`,
+    author: `Nitchez`
+}, 
+{
+    quote: ` - tu solo vez la fuente, no el caudal subterraneo que lo alimenta`,
+    author: `Mario Luna`
+}, 
+{
+    quote: `-el mundo es una tragedia para los que siente, pero una comedia para los que piensan.`,
+    author: `Horace Walpole`
+}, 
+]
+    function genertorQuotes () {
+      const quotes = [{
+    quote: `-  lo que valoras en las demas personas, dice mucho de como te valoras a ti mismo.`,
+    author: ` Andres Diaz`
+}, {
+    quote: `- cuanto mayor silencio guardas, mas puedes oir`,
+    author: `Andres Diaz`
+}, {
+    quote: ` - que no se te pase la vida, deseando otra`,
+    author: `Desconocido`
+}, {
+    quote: ` -  Aquel que tiene un porqué para vivir se puede enfrentar a todos los "cómos"`,
+    author: `Nitchez`
+}, {
+    quote: `- no hay que contar las horas, hay que hacer que las horas cuenten.`,
+    author: `desconocido`
+}, {
+    quote: `- Cuando llegue el sufrimiento, míralo a la cara y enfréntate a él`,
+    author: `Nitchez`
+}, {
+    quote: ` -  La mentira más común es aquella con la que las personas se engañan a sí mismas.`,
+    author:`Nitchez`
+}, {
+    quote: `-  ¿Es el hombre un fallo de Dios, o Dios un fallo del hombre?`,
+    author: `Nitchez`
+}, {
+    quote: `-  El remordimiento es como un perro mordiendo una piedra: una estupidez`,
+    author: `Mack Zuckerberg`
+}, {
+    quote: `- La pregunta no es "¿qué queremos saber de la gente?", sino "¿qué desea contarnos la gente de sí misma?`,
+    author: `Nitchez`
+}, 
+{
+    quote: ` - tu solo vez la fuente, no el caudal subterraneo que lo alimenta`,
+    author: `Mario Luna`
+}, 
+{
+    quote: `-el mundo es una tragedia para los que siente, pero una comedia para los que piensan.`,
+    author: `Horace Walpole`
+}, 
+]
+      const randomNumber = Math.round(Math.random()*quotes.length);
+      quoteShow.innerHTML = quotes[randomNumber].quote;
+    authorShow.innerHTML = quotes[randomNumber].author;
+    }
+    window.addEventListener('load',genertorQuotes)
+    ButtonGenerator.addEventListener('click', genertorQuotes)
+    </script>
+  </div>
+</body>
+</html>
